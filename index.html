@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .input {
+            display: flex;
+            gap: 20px;
+            font-size: 38px;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="input">
+    <label for=""> 
+    <input type="radio" name="color" value="red">Red
+  </label>
+  <label for="color">
+    <input type="radio" name="color" value="lime"> lime
+</label>
+<label for="">
+    <input type="radio" name="color" value="blue" > blue
+</label>
+</div>
+    <script>
+let radios = document.getElementsByName('color');
+for(let i = 0; i<radios.length; i++){
+    radios[i].onclick = function () {
+        let target = document.body;
+        target.style.backgroundColor = radios[i].value;
+    }
+}
+    </script>
+</body>
+</html>
